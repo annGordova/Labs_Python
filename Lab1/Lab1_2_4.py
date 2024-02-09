@@ -1,4 +1,5 @@
 
-def f11(s):
-    a = s.split()
-    print('Число слов ' + str(len(a)))
+
+def f15(x):
+    print('Число различных символов ' + str(len(set(str(x)))))
+
