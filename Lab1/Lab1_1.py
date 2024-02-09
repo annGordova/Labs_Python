@@ -10,3 +10,13 @@ def f1(x):
         if not(Vs_Simple_f1_f3(i, x)):
             k += 1
     return k
+#------------------------
+def f2(x):
+    s = str(x)
+    max = int(s[0])
+    for el in s:
+        if int(el)%3!=0:
+            if int(el) > max:
+                max = int(el)
+    return max
+
