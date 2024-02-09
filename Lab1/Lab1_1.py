@@ -19,4 +19,17 @@ def f2(x):
             if int(el) > max:
                 max = int(el)
     return max
+#------------------------
+def mindel_f3(x):
+    for i in range(2, int(x**0.5)+1):
+        if x%i ==0:
+            return i
+    return 1
 
+def f3(x):
+    for i in range(x-1, 0, -1):
+        if not(Vs_Simple_f1_f3(x, i)):
+            if i%mindel_f3(x)!=0:
+                sm = 0
+                sm = sum(int(i) for i in str(x) if int(i) < 5)
+                return sm*i
