@@ -2,15 +2,17 @@
 import numpy as np
 
 
+def max_average_ascii_weight_f11(s):
+    max_avg_weight = 0
+    for i in range(len(s) - 2):
+        avg_weight = sum(ord(c) for c in s[i:i + 3]) / 3
+        max_avg_weight = max(max_avg_weight, avg_weight)
+    return max_avg_weight
 
-def f7(s):
-    gls = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
-    k_gs, k_sg = 0, 0
-    for i in range(0, len(s)-1):
-        if s[i] in gls and s[i+1] not in gls:
-            k_gs += 1
-        elif s[i] not in gls and s[i+1] in gls:
-            k_sg += 1
-    return abs(k_gs - k_sg)
 
+def sort_strings_by_deviation_f11(strings):
+    base_max_avg_weight = max_average_ascii_weight_f11(strings[0])
+    def deviation(s):
+        return (max_average_ascii_weight_f11(s) - base_max_avg_weight) ** 2
+    return sorted(strings, key=deviation)
 
