@@ -2,21 +2,15 @@
 import numpy as np
 
 
-def calculate_deviation_f5(string, average_frequencies):
-    char_counts = {}
-    for char in string:
-        if char in char_counts:
-            char_counts[char] += 1
-        else:
-            char_counts[char] = 1
 
-    max_char = max(char_counts, key=char_counts.get)
-    max_frequency = char_counts[max_char] / len(string)
+def f7(s):
+    gls = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
+    k_gs, k_sg = 0, 0
+    for i in range(0, len(s)-1):
+        if s[i] in gls and s[i+1] not in gls:
+            k_gs += 1
+        elif s[i] not in gls and s[i+1] in gls:
+            k_sg += 1
+    return abs(k_gs - k_sg)
 
-    deviation = (max_frequency - average_frequencies[max_char]) ** 2
-    return deviation
-
-
-def sort_strings_f5(strings, average_frequencies):
-    return sorted(strings, key=lambda x: calculate_deviation_f5(x, average_frequencies))
 
