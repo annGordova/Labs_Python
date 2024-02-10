@@ -1,19 +1,18 @@
 #4, 16, 28, 40, 52
 
 
-def f16(a):
-    m1 = max(a)
-    m2 = -10*10
-    for x in a:
-        if x != m1 and x > m2:
-            m2 = x
-    i1 = a.index(m1)
-    i2 = a.index(m2)
-    if i1 > i2:
-        return a[i2+1:i1]
-    else:
-        return a[i1+1:i2]
 
+
+
+def f28(a):
+    mx = max(a)
+    mn = min(a)
+    imx = a.index(mx)
+    imn = a.index(mn)
+    if imn > imx:
+        return a[imx+1:imn]
+    else:
+        return a[imn+1:imx]
 
 
 
