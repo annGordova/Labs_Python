@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Просмотр гидов</title>
+    </head>
+    <body>
+        <h3>Информация по гидам</h3>
+        <ol>
+            {% for guide in guides %}
+            <li>
+                {{guide.surname}} </br>
+                {{guide.name}} </br>
+                {{guide.phone}} </br>
+            </li>
+            </br>
+            {% endfor %}
+        </ol>
+    </body>
+</html>

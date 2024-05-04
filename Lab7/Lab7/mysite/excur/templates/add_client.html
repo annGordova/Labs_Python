@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Добавить клиента</title>
+    </head>
+    <body>
+        <h3>Добавить клиента</h3>
+        <form action="/cgi-bin/form_client_processer.py" method="post">
+            Фамилия <input type = 'text' name = 'client_surname'>
+            Имя <input type = 'text' name = 'client_name'>
+            Номер телефона <input type = 'text' name = 'client_phone'>
+            <input type = "submit">
+        </form>
+    </body>

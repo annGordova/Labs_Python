@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Просмотр мест назначения</title>
+    </head>
+    <body>
+        <h3>Информация по местам назначений</h3>
+        <ol>
+            {% for destination in destinations %}
+            <li>
+                {{destination.region}} </br>
+                {{destination.country}} </br>
+                {{destination.place_name}} </br>
+            </li>
+            </br>
+            {% endfor %}
+        </ol>
+    </body>
+</html>
+

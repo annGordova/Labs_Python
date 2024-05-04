@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Добавить место назначения</title>
+    </head>
+    <body>
+        <h3>Добавить место назначения</h3>
+        <form action="/cgi-bin/form_destination_processer.py" method="post">
+            Регион <input type = 'text' name = 'destination_region'>
+            Страна <input type = 'text' name = 'destination_country'>
+            Название <input type = 'text' name = 'destination_place_name'>
+            <input type = "submit">
+        </form>
+    </body>
